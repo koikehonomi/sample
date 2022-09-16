@@ -1,0 +1,146 @@
+
+
+
+<%= stylesheet_link_tag 'show', :media => "all" %>
+
+
+<div class="show-box">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@700&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet"> 
+<body>
+ <div class="top-box">
+      <%= image_tag  'show.png',size: "400x400"  %>
+      <h3><%= @corporation.name %></h3>
+ </div>
+  
+ <div class="link">
+
+ <%= link_to edit_corporation_path(@corporation), method: :get do %>
+   <span class="fa-stack fa-lg" style="color:#2E9AA6"> 
+   <i class="fas fa-square fa-stack-2x"></i> 
+   <i class="fa-solid fa-pen fa-stack-1x fa-inverse"></i>
+   </span>
+ <% end %>
+ <%= link_to corporation_path(@corporation), method: :delete do %>
+   <span class="fa-stack fa-lg" style="color:#D94A4A"> 
+   <i class="fas fa-square fa-stack-2x"></i>   
+   <i class="fa-solid fa-trash fa-stack-1x fa-inverse"></i>
+   </span>
+ <% end %>
+ </div>
+ 
+ 
+ <div class="corporation">
+   <div class="basic">
+     <h3><%= @corporation.name %></h3>
+   </div>
+   <div class="normal">
+      <div class="genre">
+        <h1><業界></h1>
+        <p><%=@corporation.genre %></p>
+      </div>
+     <div class="work">
+       <h1><事業内容></h1>
+       <p><%=@corporation.work %></p>
+     </div>
+
+     <div class="mission">
+       <h1><ミッション></h1>
+       <p><%=@corporation.mission %></p>
+     </div>
+
+     <div class="vision">
+       <h1><ビジョン></h1>
+       <p><%=@corporation.vision %></p>
+     </div>
+
+     <div class="strong">
+       <h1>＜企業の強み＞</h1> 
+       <p><%= @corporation.strong %></p>
+     </div>
+     
+     <div class="competition">
+       <h1>＜競合他社＞</h1> 
+       <p><%= @corporation.competition %></p>
+     </div>
+
+     <div class="human">
+     <h1>＜求める人物・スキル＞</h1> 
+     <p><%= @corporation.human %></p>
+     </div>
+
+     <div class="job">
+       <h1><職種></h1>
+       <p><%=@corporation.job %></p>
+     </div>
+
+     <div class="salary">
+       <h1><給料></h1>
+       <p><%=@corporation.salary %></p>
+     </div>
+
+     <div class="welfare">
+       <h1><福利厚生></h1>
+       <p><%=@corporation.welfare %></p>
+     </div>
+
+
+
+   </div>
+   
+
+
+    <div class="note">
+     <div class="seminer">
+        <h1>＜説明会＞</h1> 
+        <p class="seminer-box"><%= @corporation.seminer %></p>
+     </div>
+
+     <div class="workshop">
+       <h1>＜選考なしセミナー＞</h1> 
+       <p><%= @corporation.workshop %></p>
+     </div>
+    <div class="internship">
+     
+      <h1>＜インターンシップ＞</h1> 
+      <p><%= @corporation.internship %></p>
+    </div>
+
+    <div class="visit">
+     
+      <h1>＜社員訪問＞</h1> 
+      <p><%= @corporation.visit %></p>
+  
+    </div>
+  </div>
+
+
+  <div class="search">
+    <div class="homepage">
+      <h1>＜ホームページから分かったこと＞</h1>
+      <p><%= @corporation.homepage %></p>
+    </div>
+
+    <div class="article">
+      <h1>＜ネット新聞記事から分かったこと＞</h1>
+      <p><%= @corporation.article %></p>
+    </div>
+
+    <div class="question">
+      <h1>＜疑問点＞</h1>
+      <p><%= @corporation.question %></p>
+    </div>
+
+    <div class="image">
+    <h1>＜画像＞</h1>
+    <p> <%= image_tag @corporation.image_url, size: "250x200" if @corporation.image? %></p>   
+    </div>
+   
+   
+      
+  </div>
+
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</body>
+</div>

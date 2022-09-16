@@ -1,0 +1,131 @@
+<%= stylesheet_link_tag 'edit', :media => "all" %>
+
+<div class="edit-box">
+<body>
+<div class="top-box">
+  <%= image_tag  'edit.png',size: "400x400"  %>
+  <h3>編集する</h3>
+</div>
+
+
+<%= form_for @corporation do |f| %>
+  <div class="field-name">
+    <%= f.label :企業名 %>
+    <%= f.text_field :name, :size => 30 %>
+  </div>
+
+  <div class="normal">
+
+    <div class="genre-box">
+      <%= f.label :業界 %>
+      <%= f.select :genre, 
+      [["製造", "製造"], 
+      ["運輸", "運輸"], 
+      ["出版", "出版"], 
+      ["小売", "小売"], 
+      ["金融", "金融"], 
+      ["不動産", "不動産"], 
+      ["マスコミ", "マスコミ"], 
+      ["通信", "通信"]], include_blank: "選択して下さい" %>
+    </div>
+    
+   
+    
+    <div class="work-box">
+       <p>
+       <%= f.label :事業内容 %>
+       </p>
+       <%= f.text_area :work,  :size=>"80x20" %>
+    </div>
+    
+    <div class="strong-box">
+      <p>
+      <%= f.label :強み %>
+      </p>
+      <%= f.text_area :strong,  :size=>"80x20" %>
+    </div>
+
+    <div class="competition-box">
+     <p>
+      <%= f.label :競合他社 %>
+     </p>
+      <%= f.text_area :competition,  :size=>"80x20" %>
+    </div>
+  </div>
+
+ 
+
+
+
+
+
+  <div class="note">
+
+   <div class="seminer-box">
+     <p>
+     <%= f.label :説明会 %>
+     </p>
+     <%= f.text_area :seminer,  :size=>"80x20" %>
+   </div>
+
+   <div class="workshop-box">
+   <p>
+    <%= f.label :選考なしセミナー %>
+   </p>
+    <%= f.text_area :workshop,  :size=>"80x20" %>
+   </div>
+
+   <div class="internship-box">
+   <p>
+    <%= f.label :インターンシップ %>
+   </p>
+    <%= f.text_area :internship,  :size=>"80x20" %>
+   </div>
+
+   <div class="visit-box">
+   <p>
+    <%= f.label :OBOG訪問 %>
+   </p>
+    <%= f.text_area :visit,  :size=>"80x20" %>
+   </div>
+  </div>
+  
+
+
+
+
+  <div class="search">
+   <div class="homepage-box">
+   <p>
+    <%= f.label :ホームページから発見したこと %>
+   </p>
+    <%= f.text_area :homepage,  :size=>"80x20" %>
+   </div>
+
+   <div class="article-box">
+   <p>
+    <%= f.label :ネット新聞記事から発見したこと %>
+   </p>
+    <%= f.text_area :article,  :size=>"80x20" %>
+   </div>
+
+   <div class="question-box">
+     <p>
+       <%= f.label :疑問点 %>
+   </p>
+    <%= f.text_area :question,  :size=>"80x20" %>
+   </div>
+ </div>
+  
+ <div class="put-box">
+   <%= f.submit "編集する" %>
+   <% end %>
+ </div>
+
+ <div class="link-box">
+   <%= link_to "分析一覧に戻る", corporations_path %>
+ </div>
+  
+
+</div>
+

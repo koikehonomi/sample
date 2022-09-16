@@ -1,0 +1,108 @@
+// Place all the styles related to the hello controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.hello{
+  width: 100%;
+  height: 1876px;
+  
+  .top-box{
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    left: -2px;
+    background-color: rgba(23, 34, 70, 0.08);
+    position: relative;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: row-reverse;
+  
+    
+
+    .title {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      margin:0;
+      padding:0;
+      font-size: larger;
+      line-height: 2;
+      flex-basis: 45%;
+    }   
+
+    .image{
+      width: 400px;
+      height: 400px;
+      flex-basis: 55%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      
+    
+      
+    } 
+    
+   
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(23, 34, 70, 0.08);
+  opacity: 0.8;
+
+  ul {
+    display: flex;
+    padding-left: 460px;
+  }
+  li {
+    list-style: none;
+    padding-right: 120px;
+
+    .btn-flat-logo {
+      position: relative;
+      display: inline-block;
+      padding: 0.4em 0.5em;
+      text-decoration: none;
+      color: #FFF;
+      background: #00bcd4;
+      transition: .4s;
+    }
+    
+    .btn-flat-logo:hover {
+      background: #CDD977;
+    }
+  }
+  
+  
+}
+
+.question{
+  p{
+    margin: 50px;
+    text-align: center;
+  }
+  .box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px 120px;
+
+    .card_item {
+      float: left;
+      width: calc(33.333% – 10px);
+      margin: 0 15px 15px 0;
+      background-color: #CDD977;
+      padding: 80px;
+      
+      
+    }
+  }
+}

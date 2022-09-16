@@ -1,0 +1,55 @@
+
+ 
+ * {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+     font-family: 'M PLUS Rounded 1c', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+  header {
+    background-color: #5e6b8a0a;
+    height: 80px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  header a {
+    color: rgba(0, 0, 0, 0.678); 
+    text-decoration: none; 
+    justify-content: space-between;
+  }
+  header h1 {
+    color: rgba(0, 0, 0, 0.678); ;
+    margin-left: 20px;
+    font-size: larger;
+  }
+  .header-list {
+    display: flex;
+    align-items: center;
+  }
+  header ul {
+    display: flex;
+  }
+  header li {
+    list-style: none;
+    margin-right: 40px;
+  }
+  
+  footer {
+    color: white;
+    height: 30px;
+    background-color: #000;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: flex-end;
+  }
+

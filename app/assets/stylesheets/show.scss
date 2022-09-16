@@ -1,0 +1,320 @@
+.show-box{
+    width: 100%;
+     font-family: 'Kaisei Tokumin', serif;
+     font-family: 'M PLUS Rounded 1c', sans-serif;
+   
+  
+    .top-box{
+      
+        width: 100%;
+        height: 400px;
+        margin: auto;
+        left: -2px;
+        background-color: rgba(23, 34, 70, 0.08);
+        position: relative;
+        text-align: center;
+        opacity: 0.8;
+        
+        .image_tag {
+          width: 100%;
+          height: 400px;
+        
+        
+          
+        } 
+  
+      h3 {
+        width: 100px;
+        text-align: center;
+        line-height: 400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        margin:0;
+        padding:0;
+       
+        }
+    }
+    .link{
+        text-align: right;
+        margin-right: 200px;
+    }
+    
+    .basic{
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        line-height: 1.6;
+    }
+    .normal{
+        width: 700px;
+        background:  #2e9aa61f;
+        box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        margin: auto;
+        margin-bottom: 50px;
+        padding: 40px;
+        text-align: left;
+        line-height: 1.6;
+
+
+        .genre{
+            width: 700px;
+            margin-bottom: 40px;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+        
+
+        
+        .work{
+            width: 700px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+        .mission{
+            width: 700px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+        
+        .vision{
+            width: 700px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+
+        .strong{
+            width: 700px;
+            margin-bottom: 40px;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+        
+
+
+        .competition{
+            width: 700px;
+            margin-bottom: 40px;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+        
+        .human{
+            width: 700px;
+            margin-bottom: 40px;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+        .job{
+            width: 700px;
+            margin-bottom: 40px;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+        .salary{
+            width: 700px;
+            margin-bottom: 40px;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+        .welfare{
+            width: 700px;
+            margin-bottom: 40px;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+
+    }
+    .note{
+        width: 700px;
+        background:   #2e9aa61f;
+        box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        margin: auto;
+        margin-bottom: 50px;
+        padding: 40px;
+        text-align: left;
+        line-height: 1.6;
+    
+
+        .seminer{
+            width: 700px;
+            margin-bottom: 40px;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+       
+        
+        .workshop{
+            width: 700px;
+            margin-bottom: 40px;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+        
+
+        .internship{
+            width: 700px;
+            margin-bottom: 40px;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+        
+
+
+        .visit{
+            width: 700px;
+            margin-bottom: 40px;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+        
+    }
+
+    .search{
+        
+        width: 700px;
+        background:  #2e9aa61f;
+        box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        margin: auto;
+        margin-bottom: 50px;
+        padding: 40px;
+        text-align: left;
+        line-height: 1.6;
+
+        .homepage{
+            width: 100%;
+            margin-bottom: 40px;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+        
+        
+        .article{
+            width: 100%;
+            margin-bottom: 40px;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+        
+
+        .question{
+            width: 100%;
+            margin-bottom: 40px;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+
+        .image{
+            width: 100%;
+            margin-bottom: 40px;
+            h1{
+                color: #364e96;/*文字色*/
+                padding: 0.5em 0;/*上下の余白*/
+                border-top: solid 3px #364e96;/*上線*/
+                border-bottom: solid 3px #364e96;/*下線*/
+                font-size: medium;
+            }
+        }
+        
+
+       
+    }
+    
+}

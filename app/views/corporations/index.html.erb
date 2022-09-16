@@ -1,0 +1,70 @@
+<%= stylesheet_link_tag 'index', :media => "all" %>
+<div class="index">
+
+ <div class="top-box">
+     <%= image_tag  'index.png',size: "400x400"  %>
+     <h3>分析一覧</h3> 
+     <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+     <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@700&display=swap" rel="stylesheet">
+ </div>
+ 
+
+ <div class="search">
+   <div class="text">
+      <%= form_tag({controller:"corporations",action:"index"}, method: :get) do %>
+      <%= text_field_tag :search %>
+      <input type="submit">
+      <i class="fas fa-search"></i>
+      <% end %>
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+   </div>
+   
+ </div>
+
+ <div class="plus">
+   <%= link_to new_corporation_path, method: :get do %>
+    <span class="fa-stack fa-lg" style="color:#2E9AA6"> 
+    <i class="fas fa-square fa-stack-2x"></i> 
+    <i class="fa-solid fa-plus shinki fa-stack-1x fa-inverse"></i>
+    </span>
+  <% end %>
+ </div>
+
+ <div class="container">
+ <div class="box">
+      <% @corporations.each do |t| %>
+         <% if user_signed_in? && current_user.id == t.user_id %>
+          <a href="/corporations/<%= t.id %>">
+           <div class="item">
+           
+            　<div class="main-box">
+                <div class="name">
+                  <%= t.name %>
+                </div>
+                <p><%= t.genre %></p>
+                
+             </div>
+             
+
+             <div class="time">
+             <%= I18n.l t.created_at %>
+             </div>
+             
+           </div>
+          </a>
+            
+         <% end %> 
+      <% end %>
+  </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+
+
+

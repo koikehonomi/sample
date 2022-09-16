@@ -1,0 +1,73 @@
+<%= stylesheet_link_tag 'compare', :media => "all" %>
+
+<div class="compare-box">
+ <div class="top-box">
+   <%= image_tag  'hikaku.png',size: "400x400"  %>
+   <h3>企業を比較する</h3> 
+</div>
+<div class="search">
+
+      <%= form_tag({controller:"corporations",action:"compare"}, method: :get) do %>
+        <%= text_field_tag :search, '', size: 80, placeholder: "例：A社　B社(間に空白をお入れください)" %>
+        <%= select_tag(:column, options_for_select(["事業内容","ミッション","ビジョン","強み","求める人物・スキル","福利厚生","説明会","インターンシップ","職種","給料","社員訪問","ホームページから分かったこと"])) %> 
+        <%= submit_tag '検索する'  %>
+      <% end %>
+    </div>
+    
+  <div class="text">
+
+     <% if params[:column] != nil && params[:column] != ''  %>
+      <% @corporations.each do |f| %>
+        
+        <section class="card">
+        <div class="card-content">
+        <div class="name">
+        <%= f.name %>
+        </div>
+        <% if "#{params[:column]}" == "事業内容"  %>
+         <%= f.work %>
+        <% end %>
+        <% if "#{params[:column]}" == "ミッション"  %>
+         <%= f.mission %>
+        <% end %>
+        <% if "#{params[:column]}" == "ビジョン"  %>
+         <%= f.vision %>
+        <% end %>
+        <% if "#{params[:column]}" == "企業の強み"  %>
+          <%= f.strong %>
+        <% end %>
+        <% if "#{params[:column]}" == "求める人物・スキル"  %>
+         <%= f.human %>
+        <% end %>
+        <% if "#{params[:column]}" == "職種"  %>
+         <%= f.job %>
+        <% end %>
+        <% if "#{params[:column]}" == "給料"  %>
+         <%= f.salary %>
+        <% end %>
+        <% if "#{params[:column]}" == "福利厚生"  %>
+         <%= f.welfare %>
+        <% end %>
+        <% if "#{params[:column]}" == "説明会"  %>
+        　<%= f.seminer %>
+        <% end %>
+        <% if "#{params[:column]}" == "選考なしセミナー"  %>
+        　<%= f.workshop %>
+        <% end %>
+        <% if "#{params[:column]}" == "インターンシップ"  %>
+        　<%= f.internship %>
+        <% end %>
+        <% if "#{params[:column]}" == "社員訪問"  %>
+        　<%= f.visit %>
+        <% end %>
+        <% if "#{params[:column]}" == "ホームページから分かったこと"  %>
+        　<%= f.homepage %>
+        <% end %>
+        </div>
+        </section>
+      <% end %>
+     <% end %>
+    
+ 
+   </div> 
+</div>
