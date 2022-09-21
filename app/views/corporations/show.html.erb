@@ -15,19 +15,23 @@
  </div>
   
  <div class="link">
-
- <%= link_to edit_corporation_path(@corporation), method: :get do %>
-   <span class="fa-stack fa-lg" style="color:#2E9AA6"> 
-   <i class="fas fa-square fa-stack-2x"></i> 
-   <i class="fa-solid fa-pen fa-stack-1x fa-inverse"></i>
-   </span>
- <% end %>
- <%= link_to corporation_path(@corporation), method: :delete do %>
-   <span class="fa-stack fa-lg" style="color:#D94A4A"> 
-   <i class="fas fa-square fa-stack-2x"></i>   
-   <i class="fa-solid fa-trash fa-stack-1x fa-inverse"></i>
-   </span>
- <% end %>
+      <div class="edit">
+      <%= link_to edit_corporation_path(@corporation), method: :get do %>
+        <span class="fa-stack fa-lg " style="color:#2E9AA6"> 
+        <i class="fas fa-square fa-stack-2x"></i> 
+        <i class="fa-solid fa-pen fa-stack-1x fa-inverse"></i>
+        </span>
+      <% end %>
+      </div>
+      
+      <div class="delete">
+      <%= link_to corporation_path(@corporation), method: :delete do %>
+        <span class="fa-stack fa-lg" style="color:#D94A4A"> 
+        <i class="fas fa-square fa-stack-2x"></i>   
+        <i class="fa-solid fa-trash fa-stack-1x fa-inverse"></i>
+        </span>
+      <% end %>
+      </div>
  </div>
  
  
@@ -35,54 +39,108 @@
    <div class="basic">
      <h3><%= @corporation.name %></h3>
    </div>
+
    <div class="normal">
+      
       <div class="genre">
-        <h1><業界></h1>
+        <h1>業界</h1>
         <p><%=@corporation.genre %></p>
       </div>
      <div class="work">
-       <h1><事業内容></h1>
-       <p><%=@corporation.work %></p>
+       <h1>事業内容</h1>
+       <p>
+       <%if @corporation.work.nil? %>   
+       <%=@corporation.work%>        
+       <% else %>
+       <%=safe_join(@corporation.work.split("\n"),tag(:br))%>   
+       <%end %>
+       </p>
      </div>
 
      <div class="mission">
-       <h1><ミッション></h1>
-       <p><%=@corporation.mission %></p>
+       <h1>ミッション</h1>
+       <p>
+       <%if @corporation.mission.nil? %>   
+       <%=@corporation.mission%>        
+       <% else %>
+       <%=safe_join(@corporation.mission.split("\n"),tag(:br))%>   
+       <%end %>
+       </p>
      </div>
 
      <div class="vision">
-       <h1><ビジョン></h1>
-       <p><%=@corporation.vision %></p>
+       <h1>ビジョン</h1>
+       <p>
+       <%if @corporation.vision.nil? %>   
+       <%=@corporation.vision%>        
+       <% else %>
+       <%=safe_join(@corporation.vision.split("\n"),tag(:br))%>   
+       <%end %>
+       </p>
      </div>
 
      <div class="strong">
-       <h1>＜企業の強み＞</h1> 
-       <p><%= @corporation.strong %></p>
+       <h1>企業の強み</h1> 
+       <p>
+       <%if @corporation.strong.nil? %>   
+       <%=@corporation.strong %>        
+       <% else %>
+       <%=safe_join(@corporation.strong.split("\n"),tag(:br))%>   
+       <%end %>
+       </p>
      </div>
      
      <div class="competition">
-       <h1>＜競合他社＞</h1> 
-       <p><%= @corporation.competition %></p>
+       <h1>競合他社</h1> 
+       <p>
+       <%if @corporation.competition.nil? %>   
+       <%=@corporation.competition%>        
+       <% else %>
+       <%=safe_join(@corporation.competition.split("\n"),tag(:br))%>   
+       <%end %>
+       </p>
      </div>
 
      <div class="human">
-     <h1>＜求める人物・スキル＞</h1> 
-     <p><%= @corporation.human %></p>
+     <h1>求める人物・スキル</h1> 
+     <p>
+      <%if @corporation.human.nil? %>   
+       <%=@corporation.human%>        
+       <% else %>
+       <%=safe_join(@corporation.human.split("\n"),tag(:br))%>   
+       <% end %>
+     </p>
      </div>
 
      <div class="job">
-       <h1><職種></h1>
-       <p><%=@corporation.job %></p>
+       <h1>職種</h1>
+       <p>
+       <%if @corporation.job.nil? %>   
+       <%=@corporation.job%>        
+       <% else %>
+       <%=safe_join(@corporation.job.split("\n"),tag(:br))%>   
+       <% end %></p>
      </div>
 
      <div class="salary">
-       <h1><給料></h1>
-       <p><%=@corporation.salary %></p>
+       <h1>給料</h1>
+       <p>
+       <%if @corporation.salary.nil? %>   
+       <%=@corporation.salary%>        
+       <% else %>
+       <%=safe_join(@corporation.salary.split("\n"),tag(:br))%>   
+       <% end %>
+       </p>
      </div>
 
      <div class="welfare">
-       <h1><福利厚生></h1>
-       <p><%=@corporation.welfare %></p>
+       <h1>福利厚生</h1>
+       <p><%if @corporation.welfare.nil? %>   
+       <%=@corporation.welfare%>        
+       <% else %>
+       <%=safe_join(@corporation.welfare.split("\n"),tag(:br))%>   
+       <% end %>
+       </p>
      </div>
 
 
@@ -93,24 +151,46 @@
 
     <div class="note">
      <div class="seminer">
-        <h1>＜説明会＞</h1> 
-        <p class="seminer-box"><%= @corporation.seminer %></p>
+        <h1>説明会</h1> 
+        <p class="seminer-box">
+        <%if @corporation.seminer.nil? %>   
+        <%=@corporation.seminer%>        
+        <% else %>
+        <%=safe_join(@corporation.seminer.split("\n"),tag(:br))%>   
+        <% end %></p>
      </div>
 
      <div class="workshop">
-       <h1>＜選考なしセミナー＞</h1> 
-       <p><%= @corporation.workshop %></p>
+       <h1>選考なしセミナー</h1> 
+       <p>
+       <%if @corporation.workshop.nil? %>   
+       <%=@corporation.workshop %>        
+       <% else %>
+       <%=safe_join(@corporation.workshop.split("\n"),tag(:br))%>   
+       <% end %>
+       </p>
      </div>
     <div class="internship">
-     
-      <h1>＜インターンシップ＞</h1> 
-      <p><%= @corporation.internship %></p>
+      <h1>インターンシップ</h1> 
+      <p>
+       <%if @corporation.internship.nil? %>   
+       <%=@corporation.internship %>        
+       <% else %>
+       <%=safe_join(@corporation.internship.split("\n"),tag(:br))%>   
+       <% end %>
+      </p>
     </div>
 
     <div class="visit">
      
-      <h1>＜社員訪問＞</h1> 
-      <p><%= @corporation.visit %></p>
+      <h1>社員訪問</h1> 
+      <p>
+       <%if @corporation.visit.nil? %>   
+       <%=@corporation.visit %>        
+       <% else %>
+       <%=safe_join(@corporation.visit.split("\n"),tag(:br))%>   
+       <%end %>
+       </p>
   
     </div>
   </div>
@@ -118,22 +198,40 @@
 
   <div class="search">
     <div class="homepage">
-      <h1>＜ホームページから分かったこと＞</h1>
-      <p><%= @corporation.homepage %></p>
+      <h1>ホームページから分かったこと</h1>
+      <p>
+       <%if @corporation.homepage.nil? %>   
+       <%=@corporation.homepage%>        
+       <% else %>
+       <%=safe_join(@corporation.homepage.split("\n"),tag(:br))%>   
+       <%end %>
+      </p>
     </div>
 
     <div class="article">
-      <h1>＜ネット新聞記事から分かったこと＞</h1>
-      <p><%= @corporation.article %></p>
+      <h1>ネット新聞記事から分かったこと</h1>
+      <p>
+       <%if @corporation.article.nil? %>   
+       <%=@corporation.article %>        
+       <% else %>
+       <%=safe_join(@corporation.article.split("\n"),tag(:br))%>   
+       <%end %>
+      </p>
     </div>
 
     <div class="question">
-      <h1>＜疑問点＞</h1>
-      <p><%= @corporation.question %></p>
+      <h1>疑問点</h1>
+      <p>
+       <%if @corporation.question.nil? %>   
+       <%=@corporation.question %>        
+       <% else %>
+       <%=safe_join(@corporation.question.split("\n"),tag(:br))%>   
+       <%end %>
+      </p>
     </div>
 
     <div class="image">
-    <h1>＜画像＞</h1>
+    <h1>画像</h1>
     <p> <%= image_tag @corporation.image_url, size: "250x200" if @corporation.image? %></p>   
     </div>
    

@@ -4,18 +4,22 @@
  <div class="top-box">
    <%= image_tag  'hikaku.png',size: "400x400"  %>
    <h3>企業を比較する</h3> 
-</div>
-<div class="search">
+ </div>
 
+
+
+<div class="search">
       <%= form_tag({controller:"corporations",action:"compare"}, method: :get) do %>
-        <%= text_field_tag :search, '', size: 80, placeholder: "例：A社　B社(間に空白をお入れください)" %>
-        <%= select_tag(:column, options_for_select(["事業内容","ミッション","ビジョン","強み","求める人物・スキル","福利厚生","説明会","インターンシップ","職種","給料","社員訪問","ホームページから分かったこと"])) %> 
-        <%= submit_tag '検索する'  %>
+        <%= text_field_tag :search, '', size: 80, placeholder: "例：A社　B社(間に空白をお入れください)",class:"search-a" %>
+        <%= select_tag(:column, options_for_select(["事業内容","ミッション","ビジョン","強み","求める人物・スキル","福利厚生","説明会","インターンシップ","職種","給料","社員訪問","ホームページから分かったこと"]),class:"search-b") %> 
+        <button name="button" type="submit" class="applications_searchbutton">
+          <i class="fas fa-search"></i>
+        </button>
       <% end %>
-    </div>
+</div>
     
   <div class="text">
-
+  
      <% if params[:column] != nil && params[:column] != ''  %>
       <% @corporations.each do |f| %>
         

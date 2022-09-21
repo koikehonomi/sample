@@ -31,7 +31,21 @@
       font-size: larger;
       line-height: 2;
       flex-basis: 45%;
+      
     }   
+    h1{
+      animation-name: fade;
+      animation-duration: 2s;
+      
+    }
+    @keyframes fade{
+      0%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 1;
+      }
+    }
 
     .image{
       width: 400px;

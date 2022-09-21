@@ -1,7 +1,8 @@
 <%= stylesheet_link_tag 'new', :media => "all" %>
 
-<div class="new-box">
+
 <body>
+<div class="new-box">
 <div class="top-box">
   <div class="anim-box">
     <%= image_tag  'shinki.png',size: "400x400"  %>
@@ -11,8 +12,8 @@
 
 
 
-
-<%= form_for @corporation do |f| %>
+<div class="box-all">
+ <%= form_for @corporation do |f| %>
   <div class="field-name">
     <%= f.label :企業名 %>
     <%= f.text_field :name, :size => 30 %>
@@ -41,68 +42,69 @@
        <p>
        <%= f.label :事業内容 %>
        </p>
-       <%= f.text_area :work,  :size=>"80x20" %>
+       <%= f.text_area :work,  :size=>"80x20",  :class => 'content-field'
+       %>
     </div>
     
     <div class="mission">
        <p>
        <%= f.label :ミッション %>
        </p>
-       <%= f.text_area :mission,  :size=>"80x20" %>
+       <%= f.text_area :mission,  :size=>"80x20",  :class => 'content-field' %>
     </div>
 
     
-    <div class="mission">
+    <div class="vision">
        <p>
        <%= f.label :ビジョン %>
        </p>
-       <%= f.text_area :mission,  :size=>"80x20" %>
+       <%= f.text_area :vision,  :size=>"80x20",  :class => 'content-field' %>
     </div>
     
     <div class="strong">
       <p>
       <%= f.label :強み %>
       </p>
-      <%= f.text_area :strong,  :size=>"80x20" %>
+      <%= f.text_area :strong,  :size=>"80x20",  :class => 'content-field' %>
     </div>
 
     <div class="competition-box">
      <p>
       <%= f.label :競合他社 %>
      </p>
-      <%= f.text_area :competition,  :size=>"80x20" %>
+      <%= f.text_area :competition,  :size=>"80x20",  :class => 'content-field' %>
     </div>
 
     <div class="human">
       <p>
       <%= f.label :求める人物・スキル %>
       </p>
-      <%= f.text_area :human,  :size=>"80x20" %>
+      <%= f.text_area :human,  :size=>"80x20",   :class => 'content-field' %>
     </div>
 
     <div class="job">
       <p>
       <%= f.label :職種 %>
       </p>
-      <%= f.text_area :job,  :size=>"80x20" %>
+      <%= f.text_area :job,  :size=>"80x20",  :class => 'content-field' %>
     </div>
 
     <div class="salary">
       <p>
       <%= f.label :給料 %>
       </p>
-      <%= f.text_area :salary,  :size=>"80x20" %>
+      <%= f.text_area :salary,  :size=>"80x20",  :class => 'content-field' %>
     </div>
 
     <div class="welfare">
       <p>
       <%= f.label :福利厚生 %>
       </p>
-      <%= f.text_area :welfare,  :size=>"80x20" %>
+      <%= f.text_area :welfare,  :size=>"80x20",   :class => 'content-field' %>
     </div>
 
   </div>
-
+</div>
  
 
 
@@ -115,28 +117,28 @@
      <p>
      <%= f.label :説明会 %>
      </p>
-     <%= f.text_area :seminer,  :size=>"80x20" %>
+     <%= f.text_area :seminer,  :size=>"80x20",  :class => 'content-field' %>
    </div>
 
    <div class="workshop-box">
    <p>
     <%= f.label :選考なしセミナー %>
    </p>
-    <%= f.text_area :workshop,  :size=>"80x20" %>
+    <%= f.text_area :workshop,  :size=>"80x20",  :class => 'content-field' %>
    </div>
 
    <div class="internship-box">
    <p>
     <%= f.label :インターンシップ %>
    </p>
-    <%= f.text_area :internship,  :size=>"80x20" %>
+    <%= f.text_area :internship,  :size=>"80x20",  :class => 'content-field' %>
    </div>
 
    <div class="visit-box">
    <p>
     <%= f.label :社員訪問 %>
    </p>
-    <%= f.text_area :visit,  :size=>"80x20" %>
+    <%= f.text_area :visit,  :size=>"80x20",  :class => 'content-field' %>
    </div>
   </div>
   
@@ -149,21 +151,21 @@
    <p>
     <%= f.label :ホームページから発見したこと %>
    </p>
-    <%= f.text_area :homepage,  :size=>"80x20" %>
+    <%= f.text_area :homepage,  :size=>"80x20",  :class => 'content-field' %>
    </div>
 
    <div class="article-box">
    <p>
     <%= f.label :ネット新聞記事から発見したこと %>
    </p>
-    <%= f.text_area :article,  :size=>"80x20" %>
+    <%= f.text_area :article,  :size=>"80x20",  :class => 'content-field' %>
    </div>
 
    <div class="question-box">
      <p>
        <%= f.label :疑問点 %>
    </p>
-    <%= f.text_area :question,  :size=>"80x20" %>
+    <%= f.text_area :question,  :size=>"80x20",  :class => 'content-field' %>
    </div>
 
    <div class="image">
@@ -178,8 +180,8 @@
  
   
  <div class="put-box">
-  <%= f.submit "新規分析ページを保存する" %>
- <% end %>
+  <%= f.submit "送信" , class: "submit" %> 
+  <% end %>
  </div>
 
  

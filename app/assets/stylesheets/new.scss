@@ -1,6 +1,12 @@
 .new-box{
     width: 100%;
     height: 2000px;
+    
+    h{
+     color:rgb(106, 103, 105);
+    
+    }
+    
    
   
     .top-box{
@@ -13,6 +19,18 @@
         position: relative;
         text-align: center;
         opacity: 0.8;
+
+        animation-name: fade;
+        animation-duration: 4s;
+
+        @keyframes fade{
+            0%{
+              opacity: 0;
+            }
+            100%{
+              opacity: 1;
+            }
+          }
         
        
         .image_tag {
@@ -37,41 +55,80 @@
         padding:0;
         }
     }
-
+    .box-all{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .field-name{
+        margin-top: 10px;
         width: 100%;
         height: 50px;
         text-align: center;
     }
     .normal{
-        width: 700px;
-        background:  #2e9aa61f;
-        box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+        width: 850px;
         border-radius: 10px;
-        margin: auto;
         margin-bottom: 50px;
         padding: 40px;
+        display: flex;
+        flex-direction: column;
         text-align: center;
+        justify-content: center;
 
+        
 
         .genre-box{
-            width: 700px;
+            width: 850px;
             margin-bottom: 40px;
+            border-radius: 10px;
         }
 
         
         .work-box{
-            width: 700px;
+            width: 100%;
             margin-bottom: 40px;
         }
         textarea{
             vertical-align: top;
-            background-color:  rgba(70, 117, 120, 0.15);
-            padding: 30px 0px 30px 0px;
+
+            background-color:  #89cad96b;
+            padding: 30px;
+                /* 枠線を消す */
+            border: none;
+                /* 右下の//(サイズ変更機能)を消す */
+            border-radius: 20px;
+            resize: none;
+                /* フォーカスした際の青い枠線を消す */
+            outline: none;
+                /* widthを100%にしておくことで、レスポンシブ対応ができます。 */
+            width: 100%;
+            
+            
+        }
+        .content-field{
+            font-size: 15px;
+            width: 790px;
+        }
+
+        .mission{
+            width: 850px;
+            margin-bottom: 40px;
+        }
+        textarea{
+            vertical-align: top;
+        }
+
+        .vision{
+            width: 850px;
+            margin-bottom: 40px;
+        }
+        textarea{
+            vertical-align: top;
         }
 
         .strong-box{
-            width: 700px;
+            width: 850px;
             margin-bottom: 40px;
         }
         textarea{
@@ -80,7 +137,39 @@
 
 
         .competition-box{
-            width: 700px;
+            width: 850px;
+            margin-bottom: 40px;
+        }
+        textarea{
+            vertical-align: top;
+        }
+
+        .human{
+            width: 850px;
+            margin-bottom: 40px;
+        }
+        textarea{
+            vertical-align: top;
+        }
+
+        .job{
+            width: 850px;
+            margin-bottom: 40px;
+        }
+        textarea{
+            vertical-align: top;
+        }
+
+        .salary{
+            width: 850px;
+            margin-bottom: 40px;
+        }
+        textarea{
+            vertical-align: top;
+        }
+
+        .welfare{
+            width: 850px;
             margin-bottom: 40px;
         }
         textarea{
@@ -89,28 +178,41 @@
 
     }
     .note{
-        width: 700px;
-        background:  #2e9aa61f;
-        box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+        width: 850px;
+        
+        
         border-radius: 10px;
         margin: auto;
         margin-bottom: 50px;
         padding: 40px;
         text-align: center;
-    
+        
+        .content-field{
+            font-size: 15px;
+        }
 
         .seminer-box{
-            width: 700px;
+            width: 850px;
             margin-bottom: 40px;
         }
         textarea{
             vertical-align: top;
-            background: rgba(70, 117, 120, 0.15);
+            background-color:  #ced97770;
+            padding: 30px;
+                /* 枠線を消す */
+            border: none;
+                /* 右下の//(サイズ変更機能)を消す */
+            border-radius: 20px;
+            resize: none;
+                /* フォーカスした際の青い枠線を消す */
+            outline: none;
+                /* widthを100%にしておくことで、レスポンシブ対応ができます。 */
+            width: 100%;
            
         }
         
         .workshop-box{
-            width: 700px;
+            width: 850px;
             margin-bottom: 40px;
         }
         textarea{
@@ -118,7 +220,7 @@
         }
 
         .internship-box{
-            width: 700px;
+            width: 850px;
             margin-bottom: 40px;
         }
         textarea{
@@ -127,7 +229,7 @@
 
 
         .visit-box{
-            width: 700px;
+            width: 100%;
             margin-bottom: 40px;
         }
         textarea{
@@ -137,9 +239,7 @@
 
     .search{
         
-        width: 700px;
-        background:   #2e9aa61f;
-        box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+        width: 850px;
         border-radius: 10px;
         margin: auto;
         margin-bottom: 50px;
@@ -153,8 +253,18 @@
         }
         textarea{
             vertical-align: top;
-            background-color:   rgba(70, 117, 120, 0.15);
-            padding: 30px 0px 30px 0px;
+            background-color:  #89cad96b;
+            padding: 30px;
+                /* 枠線を消す */
+            border: none;
+                /* 右下の//(サイズ変更機能)を消す */
+            border-radius: 20px;
+            resize: none;
+                /* フォーカスした際の青い枠線を消す */
+            outline: none;
+                /* widthを100%にしておくことで、レスポンシブ対応ができます。 */
+            width: 100%;
+    
         }
         
         .article-box{
@@ -177,7 +287,6 @@
 
         .image{
             width: 100%;
-        
             margin-bottom: 10px;
         }
         
@@ -186,21 +295,35 @@
     }
     .put-box{
         width: 100%;
-        height: 100px;
-        
+        height: 200px;
         text-align:center;
+        
         
         input[type="submit"] {
             width: 200px;
             font-size: 15px;
-            margin-top: 50px;
             margin-bottom: 30px;
         }
     }
     .link-box{
         width: 100%;
         height: 100px;
-        
         text-align:center;
     }
 }
+.submit{
+        display: inline-block;
+        padding: 0.8em 3em;
+        background-color: #e3364a; /* 背景色 */
+        box-shadow: 0 5px 0 #ca1c30; /* 影の太さ・色 */
+        border-radius: 60px;
+        border-color: #e3364a;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none; 
+        margin-top: 10px;
+}
+.submit:active {
+    box-shadow: none;
+    transform: translateY(5px);
+  }
