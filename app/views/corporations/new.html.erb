@@ -3,187 +3,187 @@
 
 <body>
 <div class="new-box">
-<div class="top-box">
-  <div class="anim-box">
-    <%= image_tag  'shinki.png',size: "400x400"  %>
-  </div>
-  <h3>新規分析</h3>
-</div>
-
-
-
-<div class="box-all">
- <%= form_for @corporation do |f| %>
-  <div class="field-name">
-    <%= f.label :企業名 %>
-    <%= f.text_field :name, :size => 30 %>
+  <div class="top-box">
+    <div class="anim-box">
+      <%= image_tag  'shinki.png',size: "400x400"  %>
+    </div>
+    <h3>新規分析</h3>
   </div>
 
-  <div class="normal">
 
-    <div class="genre-box">
-      <%= f.label :業界 %>
-      <%= f.select :genre, 
-      [["メーカー", "メーカー"],
-      ["商社", "商社"], 
-      ["流通・小売り", "流通・小売り"], 
-      ["金融", "金融"], 
-      ["サービス・インフラ", "サービス・インフラ"], 
-      ["ソフトウェア・通信", "ソフトウェア・通信"], 
-      ["広告・出版", "広告・出版"], 
-      ["マスコミ", "マスコミ"],
-      ["官公庁・公社・団体", "官公庁・公社・団体"],
-      ], include_blank: "選択して下さい" %>
+
+  <div class="box-all">
+  <%= form_for @corporation do |f| %>
+    <div class="field-name">
+      <%= f.label :企業名 %>
+      <%= f.text_field :name, :size => 30 %>
     </div>
+
+    <div class="normal">
+
+      <div class="genre-box">
+        <%= f.label :業界 %>
+        <%= f.select :genre, 
+        [["メーカー", "メーカー"],
+        ["商社", "商社"], 
+        ["流通・小売り", "流通・小売り"], 
+        ["金融", "金融"], 
+        ["サービス・インフラ", "サービス・インフラ"], 
+        ["ソフトウェア・通信", "ソフトウェア・通信"], 
+        ["広告・出版", "広告・出版"], 
+        ["マスコミ", "マスコミ"],
+        ["官公庁・公社・団体", "官公庁・公社・団体"],
+        ], include_blank: "選択して下さい" %>
+      </div>
+      
     
-   
-    
-    <div class="work-box">
-       <p>
-       <%= f.label :事業内容 %>
-       </p>
-       <%= f.text_area :work,  :size=>"80x20",  :class => 'content-field'
-       %>
-    </div>
-    
-    <div class="mission">
-       <p>
-       <%= f.label :ミッション %>
-       </p>
-       <%= f.text_area :mission,  :size=>"80x20",  :class => 'content-field' %>
-    </div>
+      
+      <div class="work-box">
+        <p>
+        <%= f.label :事業内容 %>
+        </p>
+        <%= f.text_area :work,  :size=>"80x20",  :class => 'content-field'
+        %>
+      </div>
+      
+      <div class="mission">
+        <p>
+        <%= f.label :ミッション %>
+        </p>
+        <%= f.text_area :mission,  :size=>"80x20",  :class => 'content-field' %>
+      </div>
 
-    
-    <div class="vision">
-       <p>
-       <%= f.label :ビジョン %>
-       </p>
-       <%= f.text_area :vision,  :size=>"80x20",  :class => 'content-field' %>
-    </div>
-    
-    <div class="strong">
+      
+      <div class="vision">
+        <p>
+        <%= f.label :ビジョン %>
+        </p>
+        <%= f.text_area :vision,  :size=>"80x20",  :class => 'content-field' %>
+      </div>
+      
+      <div class="strong">
+        <p>
+        <%= f.label :強み %>
+        </p>
+        <%= f.text_area :strong,  :size=>"80x20",  :class => 'content-field' %>
+      </div>
+
+      <div class="competition-box">
       <p>
-      <%= f.label :強み %>
+        <%= f.label :競合他社 %>
       </p>
-      <%= f.text_area :strong,  :size=>"80x20",  :class => 'content-field' %>
+        <%= f.text_area :competition,  :size=>"80x20",  :class => 'content-field' %>
+      </div>
+
+      <div class="human">
+        <p>
+        <%= f.label :求める人物・スキル %>
+        </p>
+        <%= f.text_area :human,  :size=>"80x20",   :class => 'content-field' %>
+      </div>
+
+      <div class="job">
+        <p>
+        <%= f.label :職種 %>
+        </p>
+        <%= f.text_area :job,  :size=>"80x20",  :class => 'content-field' %>
+      </div>
+
+      <div class="salary">
+        <p>
+        <%= f.label :給料 %>
+        </p>
+        <%= f.text_area :salary,  :size=>"80x20",  :class => 'content-field' %>
+      </div>
+
+      <div class="welfare">
+        <p>
+        <%= f.label :福利厚生 %>
+        </p>
+        <%= f.text_area :welfare,  :size=>"80x20",   :class => 'content-field' %>
+      </div>
+
     </div>
 
-    <div class="competition-box">
-     <p>
-      <%= f.label :競合他社 %>
-     </p>
-      <%= f.text_area :competition,  :size=>"80x20",  :class => 'content-field' %>
-    </div>
-
-    <div class="human">
-      <p>
-      <%= f.label :求める人物・スキル %>
-      </p>
-      <%= f.text_area :human,  :size=>"80x20",   :class => 'content-field' %>
-    </div>
-
-    <div class="job">
-      <p>
-      <%= f.label :職種 %>
-      </p>
-      <%= f.text_area :job,  :size=>"80x20",  :class => 'content-field' %>
-    </div>
-
-    <div class="salary">
-      <p>
-      <%= f.label :給料 %>
-      </p>
-      <%= f.text_area :salary,  :size=>"80x20",  :class => 'content-field' %>
-    </div>
-
-    <div class="welfare">
-      <p>
-      <%= f.label :福利厚生 %>
-      </p>
-      <%= f.text_area :welfare,  :size=>"80x20",   :class => 'content-field' %>
-    </div>
-
-  </div>
-</div>
- 
-
-
-
-
-
-  <div class="note">
-
-   <div class="seminer-box">
-     <p>
-     <%= f.label :説明会 %>
-     </p>
-     <%= f.text_area :seminer,  :size=>"80x20",  :class => 'content-field' %>
-   </div>
-
-   <div class="workshop-box">
-   <p>
-    <%= f.label :選考なしセミナー %>
-   </p>
-    <%= f.text_area :workshop,  :size=>"80x20",  :class => 'content-field' %>
-   </div>
-
-   <div class="internship-box">
-   <p>
-    <%= f.label :インターンシップ %>
-   </p>
-    <%= f.text_area :internship,  :size=>"80x20",  :class => 'content-field' %>
-   </div>
-
-   <div class="visit-box">
-   <p>
-    <%= f.label :社員訪問 %>
-   </p>
-    <%= f.text_area :visit,  :size=>"80x20",  :class => 'content-field' %>
-   </div>
-  </div>
   
 
 
 
 
-  <div class="search">
-   <div class="homepage-box">
-   <p>
-    <%= f.label :ホームページから発見したこと %>
-   </p>
-    <%= f.text_area :homepage,  :size=>"80x20",  :class => 'content-field' %>
-   </div>
 
-   <div class="article-box">
-   <p>
-    <%= f.label :ネット新聞記事から発見したこと %>
-   </p>
-    <%= f.text_area :article,  :size=>"80x20",  :class => 'content-field' %>
-   </div>
+    <div class="note">
 
-   <div class="question-box">
-     <p>
-       <%= f.label :疑問点 %>
-   </p>
-    <%= f.text_area :question,  :size=>"80x20",  :class => 'content-field' %>
-   </div>
+    <div class="seminer-box">
+      <p>
+      <%= f.label :説明会 %>
+      </p>
+      <%= f.text_area :seminer,  :size=>"80x20",  :class => 'content-field' %>
+    </div>
 
-   <div class="image">
-   <p>
-    <%= f.label :画像 %>
-   </p>
-    <%= f.file_field :image %>
-  </div>
+    <div class="workshop-box">
+    <p>
+      <%= f.label :選考なしセミナー %>
+    </p>
+      <%= f.text_area :workshop,  :size=>"80x20",  :class => 'content-field' %>
+    </div>
 
- </div>
+    <div class="internship-box">
+    <p>
+      <%= f.label :インターンシップ %>
+    </p>
+      <%= f.text_area :internship,  :size=>"80x20",  :class => 'content-field' %>
+    </div>
 
- 
+    <div class="visit-box">
+    <p>
+      <%= f.label :社員訪問 %>
+    </p>
+      <%= f.text_area :visit,  :size=>"80x20",  :class => 'content-field' %>
+    </div>
+    </div>
+    
+
+
+
+
+    <div class="search">
+    <div class="homepage-box">
+    <p>
+      <%= f.label :ホームページから発見したこと %>
+    </p>
+      <%= f.text_area :homepage,  :size=>"80x20",  :class => 'content-field' %>
+    </div>
+
+    <div class="article-box">
+    <p>
+      <%= f.label :ネット新聞記事から発見したこと %>
+    </p>
+      <%= f.text_area :article,  :size=>"80x20",  :class => 'content-field' %>
+    </div>
+
+    <div class="question-box">
+      <p>
+        <%= f.label :疑問点 %>
+    </p>
+      <%= f.text_area :question,  :size=>"80x20",  :class => 'content-field' %>
+    </div>
+
+    <div class="image">
+    <p>
+      <%= f.label :画像 %>
+    </p>
+      <%= f.file_field :image %>
+    </div>
+
+
+
   
- <div class="put-box">
-  <%= f.submit "送信" , class: "submit" %> 
+    
+    <div class="put-box">
+      <%= f.submit "送信" , class: "submit" %> 
+    </div>
   <% end %>
- </div>
-
+  </div>
  
   
 
