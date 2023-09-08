@@ -42,6 +42,8 @@
    <% end %>
    
   </div>
+  <%= page_entries_info @corporations %>
+
 
  <div class="container">
  <div class="box">
@@ -51,9 +53,14 @@
            <div class="item">
            
               <div class="main-box">
+                <% t.images.each do |image| %>
+                  <%= image_tag image.image_url, size: "250x200" %>
+                <% end %>
                 <div class="name">
                   <%= t.name %>
                 </div>
+                
+                
                 <p><%= t.genre %></p>
               </div>
 
@@ -69,7 +76,7 @@
  </div>
  
 
-
+ <%= paginate @corporations %>
 
 
 

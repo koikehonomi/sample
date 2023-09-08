@@ -19,6 +19,8 @@
       <h1>Co-pore</h1>
       <div class="header-list">
       <ul>
+      
+
       <% if user_signed_in? %>
            <li><a><%= link_to "分析一覧", corporations_path %></a></li> 
            <li><a><%= link_to "新規投稿",new_corporation_path %></a></li>
@@ -32,12 +34,21 @@
       <% end %>
       </ul>
       </div>
+
+      <div class="hamburger-menu">
+        <input type="checkbox" id="menu-btn-check">
+        <label for="menu-btn-check" class="menu-btn"><span></span></label>
+    </div>
       
     </header>
 
+    
     <main>
       <%= yield %>
     </main>
+    
+    <button id="scroll-to-top-btn">≫</button>
+    <%= javascript_pack_tag 'layouts/application'  %>
 
     <footer>
      <p>Copyright © GeekSalon All Rights Reserved.</p>

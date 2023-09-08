@@ -6,6 +6,7 @@ class CorporationsController < ApplicationController
         @corporations = Corporation.all
         search = params[:search]
         @corporations = Corporation.joins(:user).where("name LIKE ? OR genre LIKE ?", "%#{search}%", "%#{search}%")
+        @corporations = @corporations.page(params[:page]).per(7)    
     end 
     
     def new
@@ -18,6 +19,9 @@ class CorporationsController < ApplicationController
       corporation = Corporation.new(corporation_params)
       corporation.user_id = current_user.id
       if corporation.save
+        params[:corporation][:images]&.each do |image|
+          Image.create!(image: image, corporation_id: corporation.id)
+        end
         redirect_to :action => "index"
       else
         redirect_to :action => "new"

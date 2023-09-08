@@ -14,10 +14,17 @@
 
   <div class="box-all">
   <%= form_for @corporation do |f| %>
+
+    
+    
+
     <div class="field-name">
       <%= f.label :企業名 %>
       <%= f.text_field :name, :size => 30 %>
     </div>
+
+    <%= f.label :images %>　 
+    <%= f.file_field :images, multiple: true %>
 
     <div class="normal">
 
@@ -170,11 +177,7 @@
 
     <div class="image">
     <p>
-      <%= f.label :画像 %>
-    </p>
-      <%= f.file_field :image %>
-    </div>
-
+      
 
 
   

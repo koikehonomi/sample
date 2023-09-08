@@ -15,6 +15,9 @@
  </div>
   
  <div class="link">
+ <div class="insta">
+     <i class="fa-brands fa-instagram"></i>
+ </div>
       <div class="edit">
       <%= link_to edit_corporation_path(@corporation), method: :get do %>
         <span class="fa-stack fa-lg " style="color:#2E9AA6"> 
@@ -36,6 +39,12 @@
  
  
  <div class="corporation">
+
+ <% @corporation.images.each do |image| %>
+  <%= image_tag image.image_url, size: "250x200" %>
+<% end %>
+
+
    <div class="basic">
      <h3><%= @corporation.name %></h3>
    </div>
@@ -230,10 +239,7 @@
       </p>
     </div>
 
-    <div class="image">
-    <h1>画像</h1>
-    <p> <%= image_tag @corporation.image_url, size: "250x200" if @corporation.image? %></p>   
-    </div>
+    
    
    
       
