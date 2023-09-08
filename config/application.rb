@@ -18,5 +18,6 @@ module Shukatu
     config.i18n.default_locale = :ja  #--------------追加
     config.time_zone = 'Tokyo'   #---------------追加
     # config.eager_load_paths << Rails.root.join("extras")
+    config.hosts << 'xxx.onrender.com'
   end
 end
